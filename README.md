@@ -1,38 +1,55 @@
-# monkeyTest
-æ€§èƒ½æµ‹è¯•å·¥å…·
-
 V2.1 2017/08/08
-1.æ–°å¢æ‰‹åŠ¨æµ‹è¯•è¿‡ç¨‹ä¸­æ€§èƒ½æ•°æ®ç»Ÿè®¡
-2.monkeyTest.pyï¼šline72~line131 ä¸ºæ‰‹åŠ¨æµ‹è¯•éƒ¨åˆ†
-3.monkeyTest.pyï¼šline134~line191ä¸ºMonkeyæµ‹è¯•éƒ¨åˆ†
-4.æ³¨æ„ä¸¤ç§æµ‹è¯•å¼€å§‹éƒ¨åˆ†æ³¨é‡Šï¼ŒæŒ‰ç…§æ³¨é‡Šå†…å®¹è¿›è¡Œç›¸å…³ä»£ç æ“ä½œ
 
-V2.0Â  2017/08/07
-1.ä¼˜åŒ–äº†ç»Ÿè®¡æ€§èƒ½æ•°æ®çš„ä»£ç ,ä¸»è¦æ˜¯cpu rateçš„è®¡ç®—æ–¹å¼
-2.è§£å†³å¤šè®¾å¤‡æ•°æ®ç»Ÿè®¡é”™è¯¯é—®é¢˜ï¼Œä½¿ç”¨æŒä¹…åŒ–è®°å½•æ•°æ®ä¿¡æ¯
-3.æœ€ç»ˆæŠ¥å‘Šæ ¼å¼ä¿®æ”¹
+1.ĞÂÔöÊÖ¶¯²âÊÔ¹ı³ÌÖĞĞÔÄÜÊı¾İÍ³¼Æ
+2.monkeyTest.py£ºline72~line131 ÎªÊÖ¶¯²âÊÔ²¿·Ö
+3.monkeyTest.py£ºline134~line191ÎªMonkey²âÊÔ²¿·Ö
+4.×¢ÒâÁ½ÖÖ²âÊÔ¿ªÊ¼²¿·Ö×¢ÊÍ£¬°´ÕÕ×¢ÊÍÄÚÈİ½øĞĞÏà¹Ø´úÂë²Ù×÷
+
+
+V2.0  2017/08/07
+
+1.ÓÅ»¯ÁËÍ³¼ÆĞÔÄÜÊı¾İµÄ´úÂë,Ö÷ÒªÊÇcpu rateµÄ¼ÆËã·½Ê½
+2.½â¾ö¶àÉè±¸Êı¾İÍ³¼Æ´íÎóÎÊÌâ£¬Ê¹ÓÃ³Ö¾Ã»¯¼ÇÂ¼Êı¾İĞÅÏ¢
+3.×îÖÕ±¨¸æ¸ñÊ½ĞŞ¸Ä
+
+
 
 V1.5
-1.å¢åŠ Configé…ç½®æ–‡ä»¶
-2.å¢åŠ è®¾å¤‡å®æ—¶ç›‘æ§ï¼Œæ”¯æŒéšæ—¶æ–­å¼€è®¾å¤‡ã€æ’å…¥æ–°è®¾å¤‡ï¼Œæ¯10sæ£€æŸ¥ä¸€æ¬¡è®¾å¤‡å¹¶è‡ªåŠ¨è¿è¡Œ
-3.å¢åŠ monkey_stop.pyï¼Œæ”¯æŒéšæ—¶åœæ­¢monkeyè¿è¡Œå¹¶é‡å¯ï¼ˆé‡å¯æ“ä½œå¯æ ¹æ®éœ€è¦é€‰æ‹©æ˜¯å¦æ‰§è¡Œï¼‰
-4.è®¾ç½®æ€§èƒ½æ•°æ®ç»Ÿè®¡é—´éš”2sï¼ˆå¯è‡ªå®šä¹‰ï¼‰5.ä¼˜åŒ–å¹¶åˆ é™¤éƒ¨åˆ†æ— ç”¨æ–‡ä»¶åŠä»£ç 
-# monkey é…ç½®æ–‡ä»¶Config.pyclass Config:Â Â Â 
-# apkåŒ…åÂ Â Â  
-package_name = "com.quvideo.slideplus"Â Â Â  
-# é»˜è®¤è®¾å¤‡åˆ—è¡¨Â Â Â  
-device_dict = {}Â Â Â  
-# ç½‘ç»œ
-net = "wifi"Â Â Â  
-# monkey seedå€¼ï¼Œéšæœºäº§ç”ŸÂ Â Â  
-monkey_seed = str(random.randrange(1, 1000))Â Â Â  
-# monkey å‚æ•°Â Â Â  
-monkey_parameters = "--throttle 200 --ignore-crashes --ignore-timeouts --pct-touch 80 --pct-trackball 5 --pct-appswitch 5 --pct-syskeys 5 --pct-motion 5 -v -v 5000"Â Â Â  # logä¿å­˜åœ°å€Â Â Â  log_location = "D:\\PyCharm\\Monkey_performance\\log\\"Â Â Â  #æ€§èƒ½æ•°æ®å­˜å‚¨ç›®å½•Â Â Â  info_path = "D:\\PyCharm\\Monkey_performance\\info\\"Â Â Â  
-å¯åŠ¨monkeyæµ‹è¯•ï¼šæ‰§è¡ŒmonkeyTest.py
-åœæ­¢è¿è¡Œmonkeyï¼šæ‰§è¡Œmonkey_stop.pyå¦‚æœéœ€è¦é‡å¯è®¾å¤‡ï¼šåœ¨æ‰§è¡Œmonkey_stop.pyå‰ï¼Œåˆ é™¤#reboot(dev,dev_model)å‰çš„æ³¨é‡Šå³å¯Â Â 
+1.Ôö¼ÓConfigÅäÖÃÎÄ¼ş
+2.Ôö¼ÓÉè±¸ÊµÊ±¼à¿Ø£¬Ö§³ÖËæÊ±¶Ï¿ªÉè±¸¡¢²åÈëĞÂÉè±¸£¬Ã¿10s¼ì²éÒ»´ÎÉè±¸²¢×Ô¶¯ÔËĞĞ
+3.Ôö¼Ómonkey_stop.py£¬Ö§³ÖËæÊ±Í£Ö¹monkeyÔËĞĞ²¢ÖØÆô£¨ÖØÆô²Ù×÷¿É¸ù¾İĞèÒªÑ¡ÔñÊÇ·ñÖ´ĞĞ£©
+4.ÉèÖÃĞÔÄÜÊı¾İÍ³¼Æ¼ä¸ô2s£¨¿É×Ô¶¨Òå£©
+5.ÓÅ»¯²¢É¾³ı²¿·ÖÎŞÓÃÎÄ¼ş¼°´úÂë
 
-V1.0# monkey å‹åŠ›æµ‹è¯•åŠæ€§èƒ½ç»Ÿè®¡
+# monkey ÅäÖÃÎÄ¼şConfig.py
+class Config:
+    # apk°üÃû
+    package_name = "com.quvideo.slideplus"
+    # Ä¬ÈÏÉè±¸ÁĞ±í
+    device_dict = {}
+    # ÍøÂç
+    net = "wifi"
+    # monkey seedÖµ£¬Ëæ»ú²úÉú
+    monkey_seed = str(random.randrange(1, 1000))
+    # monkey ²ÎÊı
+    monkey_parameters = "--throttle 200 --ignore-crashes --ignore-timeouts --pct-touch 80 --pct-trackball 5 --pct-appswitch 5 --pct-syskeys 5 --pct-motion 5 -v -v 5000"
+    # log±£´æµØÖ·
+    log_location = "D:\\PyCharm\\Monkey_performance\\log\\"
+    #ĞÔÄÜÊı¾İ´æ´¢Ä¿Â¼
+    info_path = "D:\\PyCharm\\Monkey_performance\\info\\"
+    
+
+Æô¶¯monkey²âÊÔ£ºÖ´ĞĞmonkeyTest.py
+Í£Ö¹ÔËĞĞmonkey£ºÖ´ĞĞmonkey_stop.py
+Èç¹ûĞèÒªÖØÆôÉè±¸£ºÔÚÖ´ĞĞmonkey_stop.pyÇ°£¬É¾³ı#reboot(dev,dev_model)Ç°µÄ×¢ÊÍ¼´¿É
+    
+
+V1.0
+# monkey Ñ¹Á¦²âÊÔ¼°ĞÔÄÜÍ³¼Æ
 * python3 
-* ç»Ÿè®¡æ€§èƒ½ä¿¡æ¯cpu,men,fps,battery,flow
-* æ”¯æŒwifi,gprsç»Ÿè®¡* ç»Ÿè®¡crashä¿¡æ¯Â 
-*fpsç»Ÿè®¡ï¼šéœ€è¦æ‰“å¼€å¼€å‘è€…é‡Œé¢çš„GPUå‘ˆç°æ¨¡å¼åˆ†æ-åœ¨adb shell dumpsys gcxinfoä¸­
+* Í³¼ÆĞÔÄÜĞÅÏ¢cpu,men,fps,battery,flow
+* Ö§³Öwifi,gprsÍ³¼Æ
+* Í³¼ÆcrashĞÅÏ¢
+ 
+fpsÍ³¼Æ£º
+ĞèÒª´ò¿ª¿ª·¢ÕßÀïÃæµÄGPU³ÊÏÖÄ£Ê½·ÖÎö-ÔÚadb shell dumpsys gfxinfoÖĞ
