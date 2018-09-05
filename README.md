@@ -45,9 +45,8 @@ class Config:
 停止运行monkey：执行monkey_stop.py
 如果需要重启设备：在执行monkey_stop.py前，删除#reboot(dev,dev_model)前的注释即可
 ```
-    
 
-V1.0
+
 ## monkey 压力测试及性能统计
 * python3 
 * 统计性能信息cpu,men,fps,battery,flow
